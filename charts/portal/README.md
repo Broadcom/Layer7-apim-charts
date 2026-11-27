@@ -9,8 +9,10 @@ This Chart deploys the Layer7 API Developer Portal on a Kubernetes Cluster using
 
 ## Release Notes
 
-## 2.4.9-patch.1 General Updates
+## 2.4.10 General Updates
 - This new version of the chart supports API Portal 5.4.2.6
+- Kafka sub-chart is upgraded to version 1.0.2, which deploys Apache Kafka 4.2.2 (previously 4.0.2) to address security vulnerabilities in Kafka 4.0.2.
+- Upgrading Kafka is a one-way change for installations that keep their Kafka volume: once a broker has run Kafka 4.2.2 against existing data, rolling back to 4.0.2 is not guaranteed to work.
 
 ## 2.4.9 Documentation
 - Replaced gh-pages Helm install instructions (`helm repo add .../caapim.github.io/...`) with Artifactory OCI (`helm registry login` + `oci://layer7.packages.broadcom.com/charts/portal`)

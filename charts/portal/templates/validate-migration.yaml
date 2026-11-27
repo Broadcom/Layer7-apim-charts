@@ -1,0 +1,9 @@
+{{/* Copyright (c) 2026 Broadcom Inc. and its subsidiaries. All Rights Reserved. */}}
+{{- if .Values.global.deepStorage.enableDataMigration -}}
+  {{- if .Values.global.deepStorage.minio -}}
+    {{- fail "MinIO migration requires global.deepStorage.minio=false so deep storage remains on SeaweedFS. Migration deploys legacy MinIO independently." -}}
+  {{- end -}}
+  {{- if empty (trim (default "" .Values.druid.image.minio)) -}}
+    {{- fail "MinIO migration requires druid.image.minio to specify the compatible legacy MinIO image (excluding global.portalRepository)." -}}
+  {{- end -}}
+{{- end -}}

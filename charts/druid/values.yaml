@@ -29,7 +29,8 @@ image:
   broker: druid:5.4
   coordinator: druid:5.4
   middlemanager: druid:5.4
-  minio: minio:5.4
+  # Supply the compatible legacy MinIO image when enabling MinIO.
+  minio: ""
   historical: druid:5.4
   ingestion: ingestion-server:5.4
 

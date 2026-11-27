@@ -1,4 +1,4 @@
-{{- if and .Values.minio.cloudStorage .Values.global.deepStorage.minio }}
+{{- if and .Values.minio.cloudStorage (or .Values.global.deepStorage.minio .Values.global.deepStorage.enableDataMigration) }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:

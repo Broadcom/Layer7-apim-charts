@@ -10,8 +10,7 @@ This Chart deploys the Layer7 API Developer Portal on a Kubernetes Cluster using
 ## Release Notes
 
 ## 2.4.10 General Updates
-- This new version of the chart supports API Portal 5.4.2.6, the November Monthly Security Patch (MSP) release. Portal images are rebuilt on IMS base images 26.11.19, which fixes CVE-2026-114938 (remote code execution in OpenJDK).
-- Kafka sub-chart is upgraded to version 1.0.2, which deploys Apache Kafka 4.2.2 (previously 4.0.2) to address security vulnerabilities. Rolling back to 4.0.2 after a broker has run 4.2.2 against existing data is not guaranteed to work.
+- This new version of the chart supports API Portal 5.4.2.6
 
 ## 2.4.9 Documentation
 - Replaced gh-pages Helm install instructions (`helm repo add .../caapim.github.io/...`) with Artifactory OCI (`helm registry login` + `oci://layer7.packages.broadcom.com/charts/portal`)
